@@ -80,8 +80,8 @@ class Snake {
 			// 左上右下 37383940
 			let key = event.keyCode
 			if (key in DIRECTION) {
-                if (!(this.current === this.directions.right && key === 'left') || !(this.current === this.directions.left && key === 'right') || 
-                    !(this.current === this.directions.up && key === 'down') || !(this.current === this.directions.down && key === 'up')) {
+                if (!((this.current === this.directions.right && key == '37') || (this.current === this.directions.left && key == '39') || 
+                    (this.current === this.directions.up && key == '40') || (this.current === this.directions.down && key == '38'))) {
                     this.current = this.directions[DIRECTION[key]]
                 }
 			}
